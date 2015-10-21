@@ -1,0 +1,12 @@
+﻿@model MVC_2_CLIENT.Models.PageModel
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+@Model.MyProperty
+
+
+
+@Html.Partial("~/Views/Module/Index.cshtml", Model.Module);

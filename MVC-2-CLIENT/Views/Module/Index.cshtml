@@ -1,0 +1,8 @@
+﻿@model MVC_2_CLIENT.Models.ModuleModel
+
+@if (Model.RenderingMode == "editing")
+{
+    @Html.Partial("~/Views/Module/Editing.cshtml", Model)
+} else {
+    @Html.Partial("~/Views/Module/Base.cshtml", Model)
+}

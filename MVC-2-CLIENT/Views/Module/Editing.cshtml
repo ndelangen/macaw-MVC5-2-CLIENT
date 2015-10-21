@@ -1,0 +1,9 @@
+﻿@model MVC_2_CLIENT.Models.ModuleModel
+    
+EDITING
+<h1>@Model.Title</h1>
+@foreach(var tag in Model.Tags)
+{
+    <h2>@tag</h2>
+}
+
