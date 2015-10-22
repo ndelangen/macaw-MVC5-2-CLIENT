@@ -10,21 +10,22 @@ namespace MVC_2_CLIENT.Controllers
     public class ModuleController : Controller
     {
         [ChildActionOnly]
-        public ActionResult Index(ModuleModel m)
+        public ActionResult Index(ModuleModel model)
         {
-            return View(m);
-            return (m.RenderingMode == "editing") ? Editing(m) : Base(m);
+            model.Guid = Guid.NewGuid();
+            
+            return (model.RenderMode == "editing") ? Editing(model) : Base(model);
         }
 
 
         public ActionResult Base(ModuleModel model)
         {
-            return View(model);
+            return View("Base", model);
         }
 
         public ActionResult Editing(ModuleModel model)
         {
-            return View(model);
+            return View("Editing", model);
         }
     }
 }

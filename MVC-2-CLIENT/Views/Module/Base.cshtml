@@ -1,8 +1,19 @@
 ﻿@model MVC_2_CLIENT.Models.ModuleModel
-<h1>@Model.RenderingMode</h1>   
- <h1>@Model.Title</h1>
-@foreach(var tag in Model.Tags)
-{
-    <h2>@tag</h2>
+@{ 
+    Layout = null;
 }
 
+<namespace-module variant="grid" id="@Model.Guid">
+    <h1>@Model.Title</h1>
+
+    <ul>
+        @foreach (var tag in Model.Tags)
+        {
+            <li>@tag</li>
+        }
+    </ul>
+
+    <script type="application/json">
+        @Html.Raw(Json.Encode(Model))
+    </script>
+</namespace-module>

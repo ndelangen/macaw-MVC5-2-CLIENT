@@ -7,6 +7,8 @@ namespace MVC_2_CLIENT.Models
 {
     public class ModuleBase
     {
-        public string RenderingMode { get; set; }
+        public Guid Guid { get; set; }
+
+        public string RenderMode {get; set;}
     }
 }

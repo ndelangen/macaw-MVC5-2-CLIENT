@@ -12,20 +12,21 @@ namespace MVC_2_CLIENT.Controllers
         // GET: Test
         public ActionResult Index(string mode = "base")
         {
+
             var model = new PageModel()
             {
-                MyProperty = "KOEIEHOL",
+                MyProperty = "Page Property 1",
                 Module = new ModuleModel()
                 {
-                    Title = "Hallo",
-                    Tags = new List<string> { "Blaat", "Foo" },
-                    RenderingMode = mode
+                    Title = "Module Title",
+                    Tags = new List<string> { "ModuleTag1", "ModuleTag2" },
 
+                    RenderMode = mode
                 }
 
             };
 
-            return View(model);
+            return View("Index", model);
         }
 
     }
