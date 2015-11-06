@@ -10,7 +10,11 @@ namespace MVC_2_CLIENT
         {
             bundles.Add(new ScriptBundle("~/Assets/bundles/js").Include(
                 "~/Assets/js/core/x-tag-core.min.js",
-                "~/Assets/js/modules/*.js"));
+                "~/Assets/js/core/lowdash.custom.modern.js",
+				"~/Assets/js/core/x-features.js",
+				"~/Assets/js/core/x-viewport.js",
+				"~/Assets/js/core/x-variants.js",
+				"~/Assets/js/modules/*.js"));
 
             bundles.Add(new StyleBundle("~/Assets/bundles/css").Include(
                 "~/Assets/css/*.css"));
